@@ -3,7 +3,13 @@
 
 ## Features
 
-- Yet to implement
+- Choose the color of the paint brush from preloaded colors
+- Select the thickness for painting brush (Basic 3 options)
+- Ask for the user's permission to access the phone's galary
+- Draw over the image once the image is loaded and displayed on the canvas.
+- Undo any changes made
+- Redo any changes made by undoing
+- Clear the canvas (including the image loaded)
 
 ## Getting Started
 
