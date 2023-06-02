@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="peach">#FFE5B4</color>
+    <color name="green">#008F39</color>
+    <color name="red">#FF0000</color>
+    <color name="yellow">#FAD201</color>
+    <color name="blue">#0000FF</color>
+    <color name="khakhi">#6A5F31</color>
+    <color name="Ivory">#E1CC4F</color>
+    <color name="bloodRed">#922B3E</color>
+    <color name="orange">#FF7514</color>
+    <color name="lightBlue">#3B83BD</color>
+    <color name="brown">#8E402A</color>
 </resources>
