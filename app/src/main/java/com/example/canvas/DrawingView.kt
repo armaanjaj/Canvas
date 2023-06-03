@@ -68,7 +68,13 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
         val touchX = event?.x
         val touchY = event?.y
 
+        // check if user has pressed undo and cleared all the paths and is trying to draw a new path, clear the mUndoPaths so that user can't undo before the starting point
+        if(mPaths.isEmpty()){
+            mUndoPaths.clear()
+        }
+
         when (event?.action) {
+            // when user touches the screen to draw
             MotionEvent.ACTION_DOWN -> {
                 mDrawPath!!.color = color
                 mDrawPath!!.brushThickness = mBrushSize
@@ -81,6 +87,7 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
                 }
             }
 
+            // when user starts moving the finger
             MotionEvent.ACTION_MOVE -> {
                 if (touchX != null) {
                     if (touchY != null) {
@@ -89,6 +96,7 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
                 }
             }
 
+            // when user removes the finger
             MotionEvent.ACTION_UP -> {
                 mPaths.add(mDrawPath!!)
                 mDrawPath = CustomPath(color, mBrushSize)
